@@ -25,7 +25,7 @@ public class DownloadFileServlet extends HttpServlet {
         }
 
         res.setContentType("application/octet-stream");
-//        res.setHeader("Content-Disposition", "attachment; filename=\"" + file.getName() + "\"");
+        res.setHeader("Content-Disposition", "attachment; filename=\"" + file.getName() + "\"");
 
         try (FileInputStream in = new FileInputStream(file);
              OutputStream out = res.getOutputStream())

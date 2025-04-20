@@ -5,17 +5,17 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.servlet.discover.LocalFile;
+import jakarta.servlet.http.HttpSession;
+import org.example.discover.LocalFile;
+import org.example.discover.User;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-@WebServlet(name="DiscoverFile", value = "/files")
-public class MainServlet extends HttpServlet {
+@WebServlet(name="DiscoverFiles", value = "/files")
+public class DiscoverFilesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException

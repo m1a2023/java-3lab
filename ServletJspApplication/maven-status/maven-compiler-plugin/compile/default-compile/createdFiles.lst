@@ -1,4 +1,11 @@
 org\example\servlet\DownloadFileServlet.class
-org\example\servlet\Main.class
-org\example\servlet\MainServlet.class
-org\example\servlet\discover\LocalFile.class
+org\example\servlet\LogoutServlet.class
+org\example\discover\LocalFile.class
+org\example\discover\NonDatabase.class
+org\example\Main.class
+org\example\servlet\DiscoverPersonalFilesServlet.class
+org\example\servlet\DiscoverFilesServlet.class
+org\example\servlet\LoginServlet.class
+org\example\servlet\SignUpServlet.class
+org\example\discover\JsonReader.class
+org\example\discover\User.class

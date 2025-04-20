@@ -1,4 +1,4 @@
-package org.example.servlet.discover;
+package org.example.discover;
 
 import java.io.File;
 import java.text.SimpleDateFormat;

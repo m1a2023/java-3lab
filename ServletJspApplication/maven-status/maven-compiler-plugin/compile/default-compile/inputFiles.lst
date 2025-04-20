@@ -1,4 +1,11 @@
-C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\discover\LocalFile.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\discover\JsonReader.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\discover\LocalFile.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\discover\NonDatabase.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\discover\User.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\Main.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\DiscoverFilesServlet.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\DiscoverPersonalFilesServlet.java
 C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\DownloadFileServlet.java
-C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\Main.java
-C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\MainServlet.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\LoginServlet.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\LogoutServlet.java
+C:\Users\Maxim\IdeaProjects\ServletJspApplication\src\main\java\org\example\servlet\SignUpServlet.java

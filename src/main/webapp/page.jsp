@@ -6,6 +6,9 @@
         <title>Java Servlet App</title>
     </head>
     <body>
+        <form action="${pageContext.request.contextPath}/logout" method="get" style="display:inline;">
+            <button type="submit">Logout</button>
+        </form>
         <p> <%= new java.util.Date() %> </p>
         <h1> ${currentPath} </h1>
         <a href="?path=${previousPath}">Upper</a>
