@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
+@Deprecated
 public class UserTable {
     public static boolean createTable(Connection con)
         throws SQLException {

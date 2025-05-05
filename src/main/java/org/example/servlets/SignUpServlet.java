@@ -39,21 +39,26 @@ public class SignUpServlet extends HttpServlet {
             String email = json.getString("email");
 
             { // Debug
-                System.out.printf("\nun:%s\nps:%s\ne:%s", username, password, email);
+                System.out.printf("\nun:%s\nps:%s\ne:%s\n", username, password, email);
             }
 
-            /* Create new user to make new session */
-            User u = new User(username, email, password);
             UserService userService = new UserService();
 
             /* Check if user is present */
-            if (userService.exists(u)) {
+            User found = userService.found(username);
+            if (found != null) {
                 res.setStatus(HttpServletResponse.SC_CONFLICT);
+                return;
             }
-
+            { // Debug
+                System.out.println("f is not null");
+            }
+            /* Create new user to make new session */
+            User u = new User(username, email, password);
             /* Save user to database */
-            userService.insertUser(u);
-            userService.closeConnection();
+            userService.addUser(u);
+            /* Close connection */
+//            userService.closeConnection(); // What's the best con lifecycle?
 
             /* Set status conde to 201*/
             res.setStatus(HttpServletResponse.SC_CREATED);

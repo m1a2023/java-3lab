@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.example.models.JsonReader;
+import org.example.models.User;
 import org.example.service.UserService;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,13 +36,26 @@ public class LoginServlet extends HttpServlet {
             String password = json.getString("password");
 
             UserService userService = new UserService();
-            if (! userService.exists(username, password)) {
+            /* Check if user is present */
+            User found = userService.found(username);
+            if (found == null) {
                 res.setStatus(HttpServletResponse.SC_NOT_FOUND);
                 return;
             }
-            userService.closeConnection();
 
+            /* Check if password is correct */
+            if (! password.equals(found.getPassword())) {
+                res.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                return;
+            }
+
+            /* No needed to close connection - crash
+            * follows after the line below; */
+//            userService.closeConnection();
+
+            /* Setting SESSION ID to Cookies */
             HttpSession session = req.getSession();
+            /* Saving 'username' to session */
             session.setAttribute("username", username);
 
             /* Send response-code as "Ok" */
